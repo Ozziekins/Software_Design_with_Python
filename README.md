@@ -16,7 +16,7 @@ Class decorators are the mechanism for adding some extra functionality and the s
 |    ├── task2.py    <- task 2 implemented here 
 |    ├── task3.py    <- task 3 implemented here 
 |    └── task4.py    <- task 4 implemented here 
-│                               
+│── .gitignore                               
 │── LICENSE
 │── SSD Assignment 1.md                        
 └── README.md
