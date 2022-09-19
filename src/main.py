@@ -5,7 +5,19 @@ from task3 import ClassFuncDecorator, rankings
 from task4 import ClassFuncDecorator2
 
 
-@ClassFuncDecorator2
+@decorator1
+def even_odd():
+    """Function that created a list and categorizes the elements as even or odd"""
+    lst = [lambda n=x: n * 7 for x in range(1, 11)]
+
+    for item in lst:
+        if item() % 2 == 0:
+            print("{} is even".format(item()))
+        else:
+            print("{} is odd".format(item()))
+
+
+@decorator1
 def solve_quadratic(a, b, c):
     """Function that solves a quadratic equation given a, b and c"""
     D = b*b-4*a*c
@@ -15,10 +27,10 @@ def solve_quadratic(a, b, c):
         print(-b / (2 * a))
     else:
         d_sqrt = math.sqrt(D)
-        print((-b + d_sqrt) / (2 * 0), (-b - d_sqrt) / (2 * a))
+        print((-b + d_sqrt) / (2 * a), (-b - d_sqrt) / (2 * a))
 
 
-@ClassFuncDecorator2
+@decorator1
 def pascal(n):
     """Function that prints the pascal triangle pattern given n as number of rows"""
     rows = []
@@ -33,6 +45,8 @@ def pascal(n):
 
 
 if __name__ == "__main__":
+    even_odd()
+
     solve_quadratic(1, 2, c=-15)
     pascal(8)
 
