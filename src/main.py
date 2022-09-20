@@ -1,8 +1,19 @@
 import math
+import random
 from task1 import decorator1
 from task2 import decorator2
 from task3 import ClassFuncDecorator, rankings
 from task4 import ClassFuncDecorator2
+
+
+@decorator1
+def compare():
+    """Function that created a new list with squares of the original list"""
+    lst = random.sample(range(1, 999), 5)
+
+    lst2 = list(map(lambda n: n ** 2, lst))
+
+    print(lst2)
 
 
 @decorator1
@@ -45,6 +56,7 @@ def pascal(n):
 
 
 if __name__ == "__main__":
+    compare()
     even_odd()
 
     solve_quadratic(1, 2, c=-15)
@@ -54,4 +66,6 @@ if __name__ == "__main__":
     pascal(5)
 
     pascal(3)
+    compare()
+    even_odd()
     rankings()
