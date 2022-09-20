@@ -45,4 +45,4 @@ class ClassFuncDecorator2:
         except Exception as err:
             dt = datetime.now()
             with open(self.func.__name__+"_exception_log.txt", "w") as f:
-                f.write(str(err) + " occurred in " + self.func.__name__ + " at time " + str(dt))
+                f.write(str(dt) + ": in func " + self.func.__name__ + ", " + str(err) + " occurred ")
