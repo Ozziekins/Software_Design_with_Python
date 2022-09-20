@@ -30,7 +30,7 @@ Open a directory on your local system and run the following commands
 
 You can replace the decorators denoted by `@decorator1` with `decorator2`, `ClassFuncDecorator` or `ClassFuncDecorator2` depending on the task you want to check out. All tasks can be seen in the [Assignment file](https://github.com/Ozziekins/Software_Design_with_Python/blob/main/SSD%20Assignment%201.md)  
 
-Note that for task 3 and 4 where files are included, the files will be created in the root directory called `Software_Design_with_Python`
+> **_NOTE:_** For task 3 and 4 where files are included, the files will be created in the root directory called _Software_Design_with_Python_
 
 ### License  
 MIT: [LICENSE](https://github.com/Ozziekins/Software_Design_with_Python/blob/main/LICENSE)
