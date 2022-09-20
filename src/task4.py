@@ -41,7 +41,7 @@ class ClassFuncDecorator2:
                         "Source: \t" + inspect.getsource(self.func) + "\n" +
                         "Output: \t" + str(returned_value) + "\n")
                 f.close()
-        # fall back clock in case of any error encountered while carrying out the algorithm above
+        # fall back block in case of any error encountered while carrying out the algorithm above
         except Exception as err:
             dt = datetime.now()
             with open(self.func.__name__+"_exception_log.txt", "w") as f:
