@@ -5,8 +5,10 @@ from task2 import decorator2
 from task3 import ClassFuncDecorator, rankings
 from task4 import ClassFuncDecorator2
 
+test_decorator = decorator1
 
-@decorator1
+
+@test_decorator
 def compare():
     """Function that created a new list with squares of the original list"""
     lst = random.sample(range(1, 999), 5)
@@ -16,7 +18,7 @@ def compare():
     print(lst2)
 
 
-@decorator1
+@test_decorator
 def even_odd():
     """Function that created a list and categorizes the elements as even or odd"""
     lst = [lambda n=x: n * 7 for x in range(1, 11)]
@@ -28,7 +30,7 @@ def even_odd():
             print("{} is odd".format(item()))
 
 
-@decorator1
+@test_decorator
 def solve_quadratic(a, b, c):
     """Function that solves a quadratic equation given a, b and c"""
     D = b*b-4*a*c
@@ -41,7 +43,7 @@ def solve_quadratic(a, b, c):
         print((-b + d_sqrt) / (2 * a), (-b - d_sqrt) / (2 * a))
 
 
-@decorator1
+@test_decorator
 def pascal(n):
     """Function that prints the pascal triangle pattern given n as number of rows"""
     rows = []
@@ -50,7 +52,8 @@ def pascal(n):
             rows.append([1])
         else:
             rows.append([1] +  # one in the beginning
-                        [rows[-1][j]+rows[-1][j+1] for j in range(len(rows[-1])-1)] +  # summing the pairs in the middle
+                        # summing the pairs in the middle
+                        [rows[-1][j]+rows[-1][j+1] for j in range(len(rows[-1])-1)] +
                         [1])   # one in the end
         print(*rows[-1])
 
@@ -68,4 +71,4 @@ if __name__ == "__main__":
     pascal(3)
     compare()
     even_odd()
-    rankings()
+    rankings() # you don't need to use ranking with all decorators
