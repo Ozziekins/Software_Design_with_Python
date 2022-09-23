@@ -26,7 +26,8 @@ def decorator2(func):
         exec_time = end_time - start_time
 
         # print requirement according to example
-        print(func.__name__ + " call " + str(counter) + " executed in " + str(exec_time) + " sec")
+        print(func.__name__ + " call " + str(counter) +
+              " executed in " + str(exec_time) + " sec")
 
         # additional functionality to dump original source code of the function in the given format
         print("Name: \t" + func.__name__ + "\n" +
