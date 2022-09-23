@@ -5,7 +5,7 @@ from task2 import decorator2
 from task3 import ClassFuncDecorator, rankings
 from task4 import ClassFuncDecorator2
 
-test_decorator = decorator1
+test_decorator = ClassFuncDecorator
 
 
 @test_decorator

@@ -52,5 +52,7 @@ def rankings():
     print("PROGRAM \t  \t | \t RANK \t | \t TIME ELAPSED")
     i = 1
     for k, v in sorted_ranks.items():
-        print(k + " \t   " + str(i) + " \t   \t " + str(v))
+        sep_1 = 20 - len(k)
+        sep_2 = 10
+        print(k + sep_1 * ' ' + str(i) + sep_2 * ' ' + str(v))
         i += 1
