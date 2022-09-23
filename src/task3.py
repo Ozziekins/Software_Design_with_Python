@@ -46,11 +46,15 @@ class ClassFuncDecorator:
             f.close()
 
 
-# function to sort and print the functions and execution time by their ranks
 def rankings():
+    """
+    Function to sort and print the functions and execution time by their ranks
+    """
     sorted_ranks = dict(sorted(ranks.items(), key=lambda item: item[1]))
     print("PROGRAM \t  \t | \t RANK \t | \t TIME ELAPSED")
     i = 1
     for k, v in sorted_ranks.items():
-        print(k + " \t   " + str(i) + " \t   \t " + str(v))
+        sep_1 = 20 - len(k)
+        sep_2 = 10
+        print(k + sep_1 * ' ' + str(i) + sep_2 * ' ' + str(v))
         i += 1
